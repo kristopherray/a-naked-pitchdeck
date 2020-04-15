@@ -1,0 +1,103 @@
+{{ partial "head.html" . }}
+
+<body>
+
+<div id="fullpage">
+
+
+    <div id="slide-1" class="section">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12 text-center animated fadeIn delay-1">
+
+                    <h2>You can put a logo here</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+        <h1>{{ .Title }}</h1>
+    </div>
+
+    <div id="slide-2" class="section">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div id="problemIntro" class="center-column col-xs-12 text-center">
+
+                    <h2>The Problem</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt diam urna, eu interdum arcu ultrices et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{{ partial "scripts.html" . }}
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            navigation:true,
+            //options here
+            autoScrolling:true,
+            licenseKey: 'C20D0CC9-B8114ED6-8B70B93E-399676CA',
+            css3: true,
+            scrollingSpeed: 700,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: true,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: true,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            bigSectionsDestination: null,
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            paddingTop: '1em',
+            paddingBottom: '1em',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            cards: false
+        });
+
+        //methods
+        $.fn.fullpage.setAllowScrolling(true);
+    });
+</script>
+
+</body>
+</html>
